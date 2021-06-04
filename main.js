@@ -12,7 +12,7 @@ function buyCursor(){
         cursors = cursors + 1;
     	blocks = blocks - cursorCost;
         document.getElementById('cursors').innerHTML = cursors;
-        document.getElementById('cookies').innerHTML = cookies;
+        document.getElementById('blocks').innerHTML = blocks;
     };
     var nextCost = Math.floor(10 * Math.pow(1.1,cursors));
     document.getElementById('cursorCost').innerHTML = nextCost;
