@@ -8,7 +8,7 @@ function blockClick(num){
 
 function buyCursor(){
     var cursorCost = Math.floor(10 * Math.pow(1.1,cursors));
-    if(cookies >= cursorCost){
+    if(blocks >= cursorCost){
         cursors = cursors + 1;
     	blocks = blocks - cursorCost;
         document.getElementById('cursors').innerHTML = cursors;
