@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Block Buster</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="game.css" />
 	</head>
 	<body>
-		<button onclick="blockClick(1)">Click Me!</button>
-		<br />
-		Blocks: <span id="blocks">0</span>
-		<br />
-		<button onclick="buyCursor()">Buy Cursor</button>
-		<br />
-		Cursors: <span id="cursors">0</span>
-		<br />
+		<div class="box">
+			<button onclick="blockClick(1)">Click Me!</button><br />
+			Blocks: <span id="blocks">0</span>
+		</div>
+		
+		<div class="box">
+		<button onclick="buyCursor()">Buy Cursor</button><br />
+		Cursors: <span id="cursors">0</span><br />
 		Cursor Cost: <span id="cursorCost">10</span>
+		</div>
+		
+		<div class="box">
+		Blocks busted in total: <span id="bustsTotal">0</span><br />
+		Blocks busted per second: <span id="bustsPerSec">0</span><br />
+		Blocks busted per click: <span id="bustsPerClick">0</span>
+		</div>
 		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
