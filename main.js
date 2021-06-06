@@ -4,9 +4,9 @@ var blocksTotal = 0;
 var blocksPerSec = 0;
 var blocksPerClick = 1;
 
-function blockClick(blocksPerClick){
-  blocks = blocks + blocksPerClick;
-  blocksTotal = blocksTotal + blocksPerClick;
+function blockClick(num){
+  blocks = blocks + num;
+  blocksTotal = blocksTotal + num;
   document.getElementById("blocks").innerHTML = blocks;
   document.getElementById("blocksTotal").innerHTML = blocksTotal;
 };
@@ -26,6 +26,6 @@ function buyCursor(){
 
 window.setInterval(function(){
 	
-	blockClick(blocksPerClick);
+	blockClick(blocksPerSec);
 	
 }, 1000);
