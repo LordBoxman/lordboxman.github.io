@@ -1,0 +1,7 @@
+.box {
+	background-color: #FFFBDF;
+	border: 3px solid black;
+	padding: 50px;
+	display: inline-block;
+	margin: 0 auto;
+}
