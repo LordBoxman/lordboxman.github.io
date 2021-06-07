@@ -3,7 +3,7 @@ var blocksTotal = 0;
 var blocksPerSec = 0;
 var blocksPerClick = 1;
 
-var cursors = 0;
+var buildings = [0,0,0,0,0];
 
 
 function blockClick(){
@@ -19,20 +19,37 @@ function blockAdd(num){
 };
 
 function buyCursor(){
-    var cursorCost = Math.floor(10 * Math.pow(1.1,cursors));
+    var cursorCost = Math.floor(10 * Math.pow(1.148154,buildings[0]));
     if(blocks >= cursorCost){
-        cursors = cursors + 1;
+        buildings[0] = buildings[0] + 1;
 		blocksPerSec = blocksPerSec + 1;
 		blocks = blocks - cursorCost;
-		document.getElementById('blocks').innerHTML = blocks;
-		document.getElementById("statBlocks").innerHTML = blocks;
-        document.getElementById('cursors').innerHTML = cursors;
-		document.getElementById('blocksPerSec').innerHTML = blocksPerSec;
-		document.getElementById('statBlocksPerSec').innerHTML = blocksPerSec;
+        document.getElementById('cursors').innerHTML = buildings[0];
+		updateAfterSpending();
     };
-    var nextCost = Math.floor(10 * Math.pow(1.1,cursors));
+    var nextCost = Math.floor(10 * Math.pow(1.148154,buildings[0]));
     document.getElementById('cursorCost').innerHTML = nextCost;
 };
+
+function buyBlockman(){
+    var blockmanCost = Math.floor(150 * Math.pow(1.148154,buildings[1]));
+    if(blocks >= blockmanCost){
+        buildings[1] = buildings[1] + 1;
+		blocksPerSec = blocksPerSec + 10;
+		blocks = blocks - blockmanCost;
+        document.getElementById('blockmans').innerHTML = buildings[1];
+		updateAfterSpending();
+    };
+    var nextCost = Math.floor(150 * Math.pow(1.148154,buildings[1]));
+    document.getElementById('blockmanCost').innerHTML = nextCost;
+};
+
+function updateAfterSpending(){
+	document.getElementById('blocks').innerHTML = blocks;
+	document.getElementById("statBlocks").innerHTML = blocks;
+	document.getElementById('blocksPerSec').innerHTML = blocksPerSec;
+	document.getElementById('statBlocksPerSec').innerHTML = blocksPerSec;
+}
 
 window.setInterval(function(){
 	
