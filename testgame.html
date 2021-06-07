@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Block Buster</title>
+		<title>Block Builder</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="game.css" />
 	</head>
 	<body>
-		<div class="box">
-			<button onclick="blockClick(1)">Click Me!</button><br />
-			Blocks: <span id="blocks">0</span>
-		</div>
-		
-		<div class="box">
-		<button onclick="buyCursor()">Buy Cursor</button><br />
-		Cursors: <span id="cursors">0</span><br />
-		Cursor Cost: <span id="cursorCost">10</span>
-		</div>
-		
-		<div class="box">
-		Blocks in total: <span id="blocksTotal">0</span><br />
-		Blocks per second: <span id="blocksPerSec">0</span><br />
-		Blocks per click: <span id="blocksPerClick">1</span>
+		<div class="container">
+			<div class="box left">
+				Blocks: <span id="statBlocks">0</span> blocks<br />
+				Blocks in total: <span id="statBlocksTotal">0</span> blocks<br />
+				Blocks per second: <span id="statBlocksPerSec">0</span><br />
+				Blocks per click: <span id="statBlocksPerClick">1</span>
+			</div>
+			
+			<div class="box mid">
+				<img src="images/block.png" onclick="blockClick()" /><br />
+				<span id="blocks">0</span> blocks<br />
+				<span id="blocksPerSec">0</span> blocks per second
+			</div>
+			
+			<div class="box right">
+				<div class="building" onclick="buyCursor()" >
+				<img src="images/cursor.png" style="float: left; padding: 15px"/><br />
+				Cursors: <span id="cursors">0</span><br />
+				Cursor Cost: <span id="cursorCost">10</span>
+				</div>
+			</div>
 		</div>
 		<script type="text/javascript" src="main.js"></script>
 	</body>

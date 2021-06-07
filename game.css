@@ -1,7 +1,42 @@
+body {
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+}
+
 .box {
 	background-color: #FFFBDF;
 	border: 3px solid black;
-	padding: 50px;
+	padding: 15px;
 	display: inline-block;
-	margin: 0 auto;
+	flex: 1;
+	width: 300px;
+}
+
+.box.left {
+	text-align: left;
+	vertical-align: top;
+}
+
+.box.mid {
+	text-align: center;
+	vertical-align: top;
+	width: 300px;
+}
+
+.box.right {
+	text-align: center;
+}
+
+.building {
+	text-align: left;
+	border: 1px solid black;
+	padding: 15px;
+	display: inline-block;
+	margin: 5px;
+	width: 200px;
 }
