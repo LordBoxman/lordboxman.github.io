@@ -13,9 +13,9 @@ function blockClick(){
 function blockAdd(num){
 	blocks = blocks + num;
 	blocksTotal = blocksTotal + num;
-	document.getElementById("blocks").innerHTML = blocks;
-	document.getElementById("statBlocks").innerHTML = blocks;
-	document.getElementById("statBlocksTotal").innerHTML = blocksTotal;
+	document.getElementById("blocks").innerHTML = Math.floor(blocks);
+	document.getElementById("statBlocks").innerHTML = Math.floor(blocks);
+	document.getElementById("statBlocksTotal").innerHTML = Math.floor(blocksTotal);
 };
 
 function buyCursor(){
@@ -45,14 +45,17 @@ function buyBlockman(){
 };
 
 function updateAfterSpending(){
-	document.getElementById('blocks').innerHTML = blocks;
-	document.getElementById("statBlocks").innerHTML = blocks;
+	document.getElementById('blocks').innerHTML = Math.floor(blocks);
+	document.getElementById("statBlocks").innerHTML = Math.floor(blocks);
 	document.getElementById('blocksPerSec').innerHTML = blocksPerSec;
 	document.getElementById('statBlocksPerSec').innerHTML = blocksPerSec;
 }
 
+
+
+
 window.setInterval(function(){
 	
-	blockAdd(blocksPerSec);
+	blockAdd(blocksPerSec/4);
 	
-}, 1000);
+}, 250);
